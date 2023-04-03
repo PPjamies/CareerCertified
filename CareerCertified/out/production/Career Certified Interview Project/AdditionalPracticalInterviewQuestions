@@ -1,0 +1,30 @@
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+1. How would you make an application testable, what do you do to ensure code quality?
+
+> Following a design pattern or organizing the code can help make testing more modular. For example, if you are unable to grab data from the database
+ you could test the part of your code that is responsible for making that database call.
+> Break down the tests into fractions which will help you to focus on testing significant code changes.
+> Adding logs (and log levels) to your application allows you to see what the input and outputs are when a problem does occur.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+2. From a software development perspective, what steps might you take, on an ongoing basis, to continually improve your skillset?
+
+> At Ampula we had a spreadsheet of features that we wanted to implement for our product.
+One feature was the ability to integrate our Smart Home Garage Camera with Alexa, which would allow Alexa Echo Show devices to interact with our devices.
+I hadn't worked with Alexa before and I was still new to IoT but I expressed interest in learning to my tech lead and manager who were both encouraging of me to learn.
+My team pointed me towards some documentation to start with and some functionalities the wanted to support.
+From there (given a starting point and objective) my knowledge of the subject branched.
+I was able to build a Smart Home Skill that allowed Alexa to query the garage door state, operate the garage door, and view the garage's livestream.
+> I would say that the steps I take to improve my skillset is to find something that I am curious about and that my team needs,
+ get a better understanding on what functionalities we want to implement, learning and document what I think is important and relevant.
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+3. Provide an example of a time when you just couldn't complete all of your work on time to meet a deadline. What did you do? What was the result?
+
+> I was given a task to implement a compliance service which allowed users to retrieve their data and delete their account.
+The architecture at the time was monolithic and thus, certain services depended on others to be up and running before you could access the service's functionalities.
+As I was attempting to have the compliance module communicate with the other modules to start retrieving user data,
+I noticed a major circular dependency that ultimately became a blocker.
+I reached out to my tech lead as soon I discovered this problem and we came up with a plan to resume compliance once the architecture was split into separate servers.
+This allowed me to save time on the sprint to work on other high priority tasks while also thinking about how I would approach compliance in the future.
+Eventually the modules were split up into their own servers and I implemented a generic compliance manager that could be overrided by each of the services
+ which made compliance reusable, easy to understand for new developers, and straight forward to use by future modules.
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
